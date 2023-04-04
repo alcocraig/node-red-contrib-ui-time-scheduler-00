@@ -186,7 +186,7 @@ module.exports = function(RED) {
 						<div layout="row" layout-align="space-between none" style="max-height: 60px;">
 							<md-input-container flex="50" ng-show="formtimer.starttype === 'custom'" style="margin-left: 0">
 								<label style="color: var(--nr-dashboard-widgetTextColor)">${RED._("time-scheduler.ui.starttime")}</label>
-								<input id="timerStarttime-${uniqueId}" value="08:00" type="time" required pattern="^([0-1][0-9]|2[0-3]):([0-5][0-9])$">
+								<input id="timerStarttime-${uniqueId}" value="08:00:00" type="time" required pattern="^([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$">
 								<span class="validity"></span>
 							</md-input-container>
 							<md-input-container flex="50" ng-if="formtimer.starttype !== 'custom'" style="margin-left: 0">
@@ -208,7 +208,7 @@ module.exports = function(RED) {
 							` : `
 							<md-input-container flex="50" ng-show="formtimer.endtype === 'custom'">
 								<label style="color: var(--nr-dashboard-widgetTextColor)">${RED._("time-scheduler.ui.endtime")}</label>
-								<input id="timerEndtime-${uniqueId}" value="10:00" type="time" required pattern="^([0-1][0-9]|2[0-3]):([0-5][0-9])$">
+								<input id="timerEndtime-${uniqueId}" value="10:00:00" type="time" required pattern="^([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$">
 								<span class="validity"></span>
 							</md-input-container>
 							<md-input-container flex="50" ng-if="formtimer.endtype !== 'custom'">
